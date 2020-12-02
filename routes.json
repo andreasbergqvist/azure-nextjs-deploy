@@ -10,5 +10,11 @@
             "route": "/login",
             "serve": "/.auth/login/aad"
         }
+    ],
+    "platformErrorOverrides": [
+        {
+            "errorType": "Unauthenticated",
+            "serve": "/login"
+        }
     ]
 }
