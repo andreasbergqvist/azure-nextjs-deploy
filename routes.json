@@ -5,12 +5,21 @@
             "allowedRoles": [
                 "authenticated"
             ]
+        },
+        {
+            "route": "/login",
+            "serve": "/.auth/login/aad"
+        },
+        {
+            "route": "/logout",
+            "serve": "/.auth/logout"
         }
     ],
     "platformErrorOverrides": [
         {
             "errorType": "Unauthenticated",
-            "serve": "/.auth/login/aad"
+            "statusCode": 302,
+            "serve": "/login"
         }
     ]
 }
